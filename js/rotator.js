@@ -5,7 +5,7 @@ let selectorClass = 'rotatorContainer'
 let count = 0
 window.onload = function loadFrame() {
   rotatorItems = document.getElementsByClassName(selectorClass)
-  setInterval(updateRotator, 500)
+  setInterval(updateRotator, 3000)
 }
 
 function updateRotator() {

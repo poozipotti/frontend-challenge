@@ -8,7 +8,7 @@
     <header>
       <div style="display: flex; align-items: center; justify-items: space-between;">
         <img src="images/logo.png" />
-        <h1 style="font-size: 35px;">+ George</h1>
+        <h1 style="font-size: 35px; margin-left: 10px;">+ George</h1>
       </div>
     </header>
 
@@ -42,7 +42,7 @@
           <img src="images/rotator/rotator_4.jpg" />
         </div>
       </div>
-      <h2>By George Beckert</h2>
+      <h2 style="margin-bottom: 150px;">By George Beckert</h2>
       <div style="max-width: 800px;">
         <div>
           <h3>On Style</h3>
@@ -53,8 +53,8 @@
           </p>
           <h3>Search Text</h3>
           <p>
-            Initially, I didn't realize that textContent includes all descendants and did some
-            research into the
+            Initially, I didn't realize that the textContent on a DomNode includes all descendants
+            and did some research into the
             <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker">Treewalker API</a>
             to traverse the dom and find text occurences. It ended up with way more occurences than
             were really there, because I was searching the same text multiple times. Even though it
@@ -66,17 +66,21 @@
             (That's what I get for extra credit!) The difficulty here was because I needed to parse
             the raw html to add span tags and higlight the word or phrase. It turned out to be a ton
             of work to make sure I wasn't breaking the html when a word was searched that
-            corresponped to an html tag. I tried a few different solutions. I ended up using a regex
-            guard which isn't perfect, but I decided to leave it in as is rather than nix the
-            feature entirely. The highlighter also can't highlight across html tags. The right way
-            to do this would be to parse through the html yourself word by word, or to utilize a
-            library. This seemed outside the scope of the project, so I decided to leave it as is.
+            corresponped to an html tag. I tried a few different solutions to manually parse through
+            the html, but I ended up using a regex in the end. It isn't perfect, but I decided to
+            leave it in as is rather than nix the feature entirely. The highlighter also can't
+            highlight across html tags. I think corrext way to do this in production would be to
+            parse through the html yourself word by word, or to utilize a library.
           </p>
           <h3>Image Rotator</h3>
           <p>
             The image Rotator Was very straightfoward. I started by poking around to get some
             inspiration, then I got to coding. I ended up going with a pretty long fade in, because
-            I thought it suited the moodiness of the photos themselves best.
+            I thought it suited the moodiness of the photos themselves best. One thing I did have an
+            issue with was responsiveness and image height. I ended up playing with widths until I
+            got something I was happy with at most sizes. Because I used CSS grid, the bottom text
+            will get pushed out at sizes smaller than 400px. I chose to keep it that way because The
+            image gets way to busy with all the text. It's not a bug, it's a feature!
           </p>
         </div>
       </div>
