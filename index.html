@@ -6,10 +6,14 @@
   </head>
   <body>
     <header>
-      <img src="images/logo.png" />
+      <div style="display: flex; align-items: center; justify-items: space-between;">
+        <img src="images/logo.png" />
+        <h1 style="font-size: 35px;">+ George</h1>
+      </div>
     </header>
 
     <div id="about">
+      <h1>Frontend Challenge Solutions</h1>
       <div id="imageRotator">
         <div class="rotatorContainer">
           <h4>Man eyes</h4>
@@ -17,19 +21,19 @@
           <img src="images/rotator/rotator_1.jpg" />
         </div>
 
-        <div class="rotatorContainer unactive" >
+        <div class="rotatorContainer unactive">
           <h4>Man with hand covering face</h4>
           <p>Soufflé pudding powder sesame snaps dragée biscuit wafer fruitcake.</p>
           <img src="images/rotator/rotator_2.jpg" />
         </div>
 
-        <div class="rotatorContainer unactive" >
+        <div class="rotatorContainer unactive">
           <h4>Woman eyes</h4>
           <p>Cotton candy donut tiramisu cupcake.</p>
           <img src="images/rotator/rotator_3.jpg" />
         </div>
 
-        <div class="rotatorContainer unactive" >
+        <div class="rotatorContainer unactive">
           <h4>Woman with hand covering face</h4>
           <p>
             Oat cake bonbon sesame snaps cupcake lollipop cake lollipop. Powder tootsie roll danish
@@ -37,17 +41,9 @@
           </p>
           <img src="images/rotator/rotator_4.jpg" />
         </div>
-
-        <hr />
-
-        <div id="rotator">Rotator Here</div>
       </div>
-      <h1>Frontend Challenge Solutions</h1>
       <h2>By George Beckert</h2>
       <div style="max-width: 800px;">
-        <p>
-          This is where I'm going to put more thoughts on what I did.
-        </p>
         <div>
           <h3>On Style</h3>
           <p>
@@ -75,6 +71,12 @@
             feature entirely. The highlighter also can't highlight across html tags. The right way
             to do this would be to parse through the html yourself word by word, or to utilize a
             library. This seemed outside the scope of the project, so I decided to leave it as is.
+          </p>
+          <h3>Image Rotator</h3>
+          <p>
+            The image Rotator Was very straightfoward. I started by poking around to get some
+            inspiration, then I got to coding. I ended up going with a pretty long fade in, because
+            I thought it suited the moodiness of the photos themselves best.
           </p>
         </div>
       </div>
@@ -173,4 +175,5 @@
     </div>
   </body>
   <script src="js/search.js"></script>
+  <script src="js/rotator.js"></script>
 </html>

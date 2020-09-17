@@ -163,12 +163,19 @@ hr {
 #textSearch {
   margin-top: 150px;
 }
+#imageRotator {
+  max-width: 400px;
+  width: 100%;
+  grid-template: 1fr / 1fr;
+  display: grid;
+}
 
 .rotatorContainer {
   display: grid;
-  grid-template: 50px 1fr 50px / 1fr;
-  height: 800px;
+  grid-template: min-content 1fr min-content / 1fr;
+  height: 400px;
   overflow: hidden;
+  grid-area: 1 / 1 / 1 / 1;
 }
 .rotatorContainer > h4 {
   grid-area: 1 / 1 / 1 / 1;
@@ -177,9 +184,12 @@ hr {
   background-color: #2b2b2b88;
   padding: 20px;
   width: 100%;
+  height: ;
 }
 .rotatorContainer > img {
   width: 100%;
+  height: auto;
+  display: block;
   align-self: start;
   grid-area: 1 / 3 / 1 / 1;
 }
@@ -191,6 +201,10 @@ hr {
   z-index: 1;
 }
 .unactive {
-  display:none;
+  transition: opacity 2s;
+  opacity: 0;
 }
-
+.active {
+  transition: opacity 2s;
+  opacity: 1;
+}
