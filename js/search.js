@@ -12,7 +12,10 @@ document.getElementById('searchForm').addEventListener('submit', event => {
 
 const wrapWords = (html, word) => {
   oldHTML = html
-  return html.replace(new RegExp(word, 'gi'), match =>
+  if (word.length === 0) {
+    return oldHTML
+  }
+  return html.replace(new RegExp(`${word}(?!([^<]+)?>)`, 'gi'), match =>
     wrappedWord(match.substring(match.indexOf(word), word.length)),
   )
 }
@@ -20,8 +23,4 @@ const wrappedWord = word => `<span class=accentWord>${word}</span>`
 
 const cleanUpWrappers = html => (oldHTML ? oldHTML : html)
 
-const countWords = (word, node) =>
-  node.textContent
-    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')
-    .split(' ')
-    .filter(anyWord => anyWord.toLowerCase().includes(word.toLowerCase())).length
+const countWords = (word, node) => node.textContent.match(new RegExp(`${word}`, 'gi')).length
