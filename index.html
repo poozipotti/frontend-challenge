@@ -20,15 +20,33 @@
           <h3>On Style</h3>
           <p>
             Most of the styling was copied or inspied from the Spartacus website. I wanted to give
-            the site a little but a a facelift, but still economical with my time. I thought a
-            great place to look would be none other than the Spartacus Website Itself!
+            the site a little but a a facelift, but still economical with my time. I thought a great
+            place to look would be none other than the Spartacus Website Itself!
+          </p>
+          <h3>Search Text</h3>
+          <p>
+            My initial thought was to grab all of the html in the text to be searched and use a
+            ReGex to grab all the matching text, but it seemed like that approach would be very
+            error prone (what if the user searches for "h1"?)
+          </p>
+          <p>
+            With the Regex Solution nixed, I decided to traverse the dom and match on the inner
+            text. Through some research I found the
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker">Treewalker API</a>
+            and decided to use that to traverse the Text Node.
           </p>
         </div>
       </div>
     </div>
     <div id="textSearch">
-      <h1>Search Text</h1>
-      <form>
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h2>Search Text</h2>
+        <p>
+          Found <span class="accentWord" id="resultText">0</span> occurrences of the word
+          <span id="searchWord">"llama"</span> in the below text.
+        </p>
+      </div>
+      <form id="searchForm">
         <input
           type="text"
           id="search_input"
@@ -37,11 +55,6 @@
         />
         <button type="submit" style="width: 50%; max-width: 400px;">Search</button>
       </form>
-
-      <div style="display: flex;">
-        <h2>Search Text</h2>
-        <p style="maring-top: auto;">Found 0 occurrences of the word "llama" in the below text.</p>
-      </div>
       <div id="search_text">
         <p>
           <b>Penguins</b> (<a href="/wiki/Order_(biology)" title="Order (biology)">order</a>
@@ -118,4 +131,5 @@
       </div>
     </div>
   </body>
+  <script src="js/search.js"></script>
 </html>

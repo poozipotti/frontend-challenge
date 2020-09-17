@@ -156,3 +156,11 @@ hr {
   background: var(--foreground);
   color: var(--background);
 }
+.accentWord {
+  color: var(--brand-main);
+  font-weight:bold;
+}
+#textSearch {
+  margin-top: 150px;
+}
+

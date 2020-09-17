@@ -1,20 +1,27 @@
-//Thanks to 
-//https://stackoverflow.com/questions/748309/find-words-in-html-page-with-javascript
-//for getting me started!
+let oldHTML = undefined
+document.getElementById('searchForm').addEventListener('submit', event => {
+  event.preventDefault()
+  // actual logic, e.g. validate the form
+  const word = document.getElementById('search_input').value
+  const searchText = document.getElementById('search_text')
+  searchText.innerHTML = cleanUpWrappers(searchText.innerHTML)
+  document.getElementById('resultText').textContent = countWords(word, searchText)
+  document.getElementById('searchWord').textContent = word
+  searchText.innerHTML = wrapWords(searchText.innerHTML, word)
+})
 
-//I was split between just using a quick regex and traversing the dom
-// using regex on the entire html in the body of the search text would be fast and simple
-// but sadly html isn't regular and there can always be corner cases and bugs
-// I decided to go for the less effecient but more full proof dom traversal method.
+const wrapWords = (html, word) => {
+  oldHTML = html
+  return html.replace(new RegExp(word, 'gi'), match =>
+    wrappedWord(match.substring(match.indexOf(word), word.length)),
+  )
+}
+const wrappedWord = word => `<span class=accentWord>${word}</span>`
 
+const cleanUpWrappers = html => (oldHTML ? oldHTML : html)
 
-const wordCount = 0;
-
-//while it's unlikely this should prevent most collisions for cleaning up the word wrap
-const wordWrapClassSeed = MAth.random();
-
-const findWords = () => {};
-
-const wrapWord = (word) => {};
-
-const cleanUpWrappers = () => {};
+const countWords = (word, node) =>
+  node.textContent
+    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')
+    .split(' ')
+    .filter(anyWord => anyWord.toLowerCase().includes(word.toLowerCase())).length
