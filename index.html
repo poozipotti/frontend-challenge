@@ -6,13 +6,11 @@
   </head>
   <body>
     <header>
-      <div style="display: flex; align-items: center; justify-items: space-between;">
-        <img src="images/logo.png" />
-        <h1 style="font-size: 35px; margin-left: 10px;">+ George</h1>
-      </div>
+      <img src="images/logo.png" />
+      <h1>+ George</h1>
     </header>
 
-    <div id="about">
+    <div id="about" class="inverted">
       <h1>Frontend Challenge Solutions</h1>
       <div id="imageRotator">
         <div class="rotatorContainer">
@@ -42,14 +40,16 @@
           <img src="images/rotator/rotator_4.jpg" />
         </div>
       </div>
-      <h2 style="margin-bottom: 150px;">By George Beckert</h2>
-      <div style="max-width: 800px;">
+      <h2>By George Beckert</h2>
+      <div class="aboutBody">
         <div>
           <h3>On Style</h3>
           <p>
             Most of the styling was copied or inspied from the Spartacus website. I wanted to give
             the site a little bit of a facelift, but still economical with my time. I thought a
-            great place to look would be none other than the Spartacus Website Itself!
+            great place to look would be none other than the Spartacus Website Itself! Darkmode was
+            easy to implement, and I've been dying to add it to a site since I read about leveraging
+            css variables fot it.
           </p>
           <h3>Search Text</h3>
           <p>
@@ -86,7 +86,7 @@
       </div>
     </div>
     <div id="textSearch">
-      <div style="display: flex; align-items: center; justify-content: space-between;">
+      <div id="searchTitle">
         <h2>Search Text</h2>
         <p>
           Found <span class="accentWord" id="resultText">0</span> occurrences of the word
@@ -94,13 +94,8 @@
         </p>
       </div>
       <form id="searchForm">
-        <input
-          type="text"
-          id="search_input"
-          value="llama"
-          style="width: 100%; margin-bottom: 20px;"
-        />
-        <button type="submit" style="width: 50%; max-width: 400px;">Search</button>
+        <input type="text" id="search_input" value="llama" />
+        <button type="submit" >Search</button>
       </form>
       <div id="search_text">
         <p>

@@ -1,12 +1,8 @@
 # Spartacus Frontend Challenge
 
-Contained within this repo is a series of challenges, each challenge is an HTML file that contains an explanation of the challenge as well as a partial solution.
+The whole project ended taking me ~5 hours. A lot of this time was spent on styling and adding the highlighting feature, the core problems probably only took about half the time. 
 
-Please complete the HTML/CSS/JavaScript code in the challenge file in order to solve it and send the completed code back to us to review. 
-Feel free to put comments in the HTML file to explain your solution. Also **PLEASE DO NOT USE ANY THIRD PARTY LIBRARIES** to complete these.
+I didn't mind taking the extra time, It's been a long time since I've messed around with vanilla javascript and it was super fun to see how much I really remembered about dom manipulation without all the bells and whistles. 
+I can't think of anything in particular I'd wish was different about the challenge, It really was a lot fun to do. 
 
-One thing to keep in mind here is that these are fairly open-ended for a reason. 
-We want to see your creativity and style, there is plenty of room for finesse, so please feel free to use it. 
-Also these things shouldn't take you longer than a few hours, so please don't feel like you need to spend a day on it.
-
-Have fun, show off, and please give us feedback so we can make this better!
+You can find the solution site hosted at georgebeckert.com/fontend-challenge

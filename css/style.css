@@ -2,28 +2,44 @@
 /* most of the style added was taken directly from the spartacus website 
  * or inspired directly by it
 */
+-@font-face {
+-  font-family: 'Mabry';
+-  font-style: normal;
+-  font-weight: 700;
+-  font-display: swap;
+-  src: url('https://cdn.spartacus.com/fonts/mabry-bold-pro.woff2') format('woff2'),
+-    url('https://cdn.spartacus.com/fonts/mabry-bold-pro.woff') format('woff');
+}
+-@font-face {
+-  font-family: 'TT';
+-  font-style: normal;
+-  font-weight: normal;
+-  font-display: swap;
+-  src: url('https://cdn.spartacus.com/fonts/tt-commons-regular.woff2') format('woff2'),
+-    url('https://cdn.spartacus.com/fonts/tt-commons-regular.woff') format('woff');
+}
 :root {
   --foreground: #2b2b2b;
   --background: whitesmoke;
   --brand-main: #079d77;
 }
-
-@font-face {
-  font-family: 'Mabry';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('https://cdn.spartacus.com/fonts/mabry-bold-pro.woff2') format('woff2'),
-    url('https://cdn.spartacus.com/fonts/mabry-bold-pro.woff') format('woff');
+.inverted {
+  --foreground: whitesmoke;
+  --background: #2b2b2b;
 }
 
-@font-face {
-  font-family: 'TT';
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url('https://cdn.spartacus.com/fonts/tt-commons-regular.woff2') format('woff2'),
-    url('https://cdn.spartacus.com/fonts/tt-commons-regular.woff') format('woff');
+a {
+  color: var(--foreground);
+}
+a ::visited {
+  color: var(--foreground);
+}
+
+.about a {
+  color: var(--foreground);
+}
+a ::visited {
+  color: var(--foreground);
 }
 
 body {
@@ -75,7 +91,10 @@ button {
   font-size: 16px;
   border-radius: 40px;
   text-decoration: none;
+  width: 50%;
+  max-width: 400px;
 }
+
 input {
   -webkit-tap-highlight-color: transparent;
   --antd-wave-shadow-color: #079d77;
@@ -102,10 +121,30 @@ input {
   -webkit-appearance: none;
   touch-action: manipulation;
   text-overflow: ellipsis;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#searchTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header {
   padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-items: space-between;
+}
+header h1 {
+  font-size: 35px;
+  margin-left: 10px;
+}
+header h2 {
+  margin-bottom: 150px;
+}
+.aboutBody {
+  max-width: 800px;
 }
 
 header img {
@@ -153,8 +192,8 @@ hr {
 }
 #about {
   padding: 20px;
-  background: var(--foreground);
-  color: var(--background);
+  color: var(--foreground);
+  background-color: var(--background);
 }
 .accentWord {
   color: var(--brand-main);
@@ -163,6 +202,7 @@ hr {
 #textSearch {
   margin-top: 150px;
 }
+
 #imageRotator {
   max-width: 400px;
   width: 100%;
