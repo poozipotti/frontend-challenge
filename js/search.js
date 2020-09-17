@@ -23,4 +23,5 @@ const wrappedWord = word => `<span class=accentWord>${word}</span>`
 
 const cleanUpWrappers = html => (oldHTML ? oldHTML : html)
 
-const countWords = (word, node) => node.textContent.match(new RegExp(`${word}`, 'gi')).length
+const countWords = (word, node) =>
+  (node.textContent.match(new RegExp(`${word}`, 'gi')) || []).length
