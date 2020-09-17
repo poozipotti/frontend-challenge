@@ -1,0 +1,158 @@
+/*colors (respectfully taken from the spartacus website)*/
+/* most of the style added was taken directly from the spartacus website 
+ * or inspired directly by it
+*/
+:root {
+  --foreground: #2b2b2b;
+  --background: whitesmoke;
+  --brand-main: #079d77;
+}
+
+@font-face {
+  font-family: 'Mabry';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://cdn.spartacus.com/fonts/mabry-bold-pro.woff2') format('woff2'),
+    url('https://cdn.spartacus.com/fonts/mabry-bold-pro.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TT';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('https://cdn.spartacus.com/fonts/tt-commons-regular.woff2') format('woff2'),
+    url('https://cdn.spartacus.com/fonts/tt-commons-regular.woff') format('woff');
+}
+
+body {
+  font-family: 'TT', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--foreground);
+  background-color: var(--background);
+  font-size: 1.2rem;
+  line-height: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  --antd-wave-shadow-color: #079d77;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  user-select: none;
+  touch-action: manipulation;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+  box-sizing: border-box;
+  font-family: Mabry, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: none;
+  line-height: 1em;
+  margin-bottom: 16px;
+  width: 100%;
+  outline: 0;
+  background: #fff;
+  color: #fff;
+  background-color: #22ab84;
+  border-color: #22ab84;
+  height: 40px;
+  padding: 6.4px 20px;
+  font-size: 16px;
+  border-radius: 40px;
+  text-decoration: none;
+}
+input {
+  -webkit-tap-highlight-color: transparent;
+  --antd-wave-shadow-color: #079d77;
+  font-family: inherit;
+  overflow: visible;
+  margin: 0;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  color: #2b3734;
+  line-height: 1.5715;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  transition: all 0.3s;
+  padding: 6.5px 11px;
+  font-size: 16px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+  text-overflow: ellipsis;
+}
+
+header {
+  padding: 16px 32px;
+}
+
+header img {
+  height: 40px;
+}
+
+#content {
+  padding: 16px 32px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Mabry';
+  font-style: normal;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 67px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+hr {
+  height: 1px;
+  background: #eaeaea;
+  border: none;
+}
+#about {
+  padding: 20px;
+  background: var(--foreground);
+  color: var(--background);
+}
