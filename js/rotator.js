@@ -9,7 +9,6 @@ window.onload = function loadFrame() {
 }
 
 function updateRotator() {
-  console.log('updated');
   rotatorItems[count].classList.add('unactive')
   rotatorItems[count].classList.remove('active')
   count = (count + 1) % rotatorItems.length
